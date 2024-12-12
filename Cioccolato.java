@@ -1,11 +1,11 @@
 public class Cioccolato {
-    //private static final int MAX_PROD = 100;
+    protected static  int MAX_PROD = 100;
     protected String tipoCioccolato;
     protected String aggiunta;
     protected double percentualeCacao;
 
-    public String produce(){
-        return "tipo cioccolato: "+tipoCioccolato+" cacao: " + percentualeCacao+"%";
+    public void produce(){
+        System.out.println("tipo cioccolato: "+ tipoCioccolato+ " cacao: " + percentualeCacao+ "%"); 
     }
 
     public String getTipoCioccolato() {
