@@ -5,7 +5,7 @@ public class Cioccolato {
     protected double percentualeCacao;
 
     public void produce(){
-        System.out.println("tipo cioccolato: "+ tipoCioccolato+ " cacao: " + percentualeCacao+ "%"); 
+        System.out.println("Cioccolato prodotto: tipo cioccolato: "+ tipoCioccolato+ ", cacao: " + "percentuale cacao: " + percentualeCacao+ "%"); 
     }
 
     public String getTipoCioccolato() {
@@ -24,9 +24,10 @@ public class Cioccolato {
         this.aggiunta = aggiunta;
     }
 
-    public Cioccolato(String tipoCioccolato, String aggiunta) {
+    public Cioccolato(String tipoCioccolato, String aggiunta, double percentualeCacao) {
         this.tipoCioccolato = tipoCioccolato;
         this.aggiunta = aggiunta;
+        this.percentualeCacao = percentualeCacao;
     }
 
     public double getPercentualeCacao() {

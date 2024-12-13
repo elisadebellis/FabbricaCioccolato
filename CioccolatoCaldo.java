@@ -39,9 +39,17 @@ public class CioccolatoCaldo extends Cioccolato{
         return peso;
     }
 
-    public CioccolatoCaldo(String tipoCioccolato, String aggiunta, float temperatura, float densita, int peso){
+    
 
-        super(tipoCioccolato, aggiunta);
+    @Override
+    public String toString() {
+        return "CioccolatoCaldo [temperatura=" + temperatura + ", tipoCioccolato=" + tipoCioccolato + ", densita="
+                + densita + ", aggiunta=" + aggiunta + ", peso=" + peso + "]";
+    }
+
+    public CioccolatoCaldo(String tipoCioccolato, String aggiunta, double percentualeCacao, float temperatura, float densita, int peso){
+
+        super(tipoCioccolato, aggiunta,percentualeCacao);
         this.temperatura = temperatura;
         this.densita = densita;
 
@@ -50,14 +58,15 @@ public class CioccolatoCaldo extends Cioccolato{
     @Override
     public void produce(){
      
-        if (peso < super.MAX_PROD){
+        if (peso > super.MAX_PROD){
 
             System.out.println("Peso non sufficiente");
 
 
         }
         else {
-            System.out.println("tipo cioccolato: "+tipoCioccolato+" cacao: " + percentualeCacao+"%"+ "peso: " + peso);
+            super.produce();
+            super.MAX_PROD -= peso;
         }
     }
 

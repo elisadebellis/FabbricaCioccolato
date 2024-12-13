@@ -3,8 +3,8 @@ public class Cioccolatini extends Cioccolato{
     private String ripieno;
     private final int peso = 2;
 
-    public Cioccolatini(String tipoCioccolato, String aggiunta, String forma, String ripieno){
-        super(tipoCioccolato, aggiunta);
+    public Cioccolatini(String tipoCioccolato, String aggiunta,double percentualeCacao, String forma, String ripieno){
+        super(tipoCioccolato, aggiunta,percentualeCacao);
         this.forma=forma;
         this.ripieno=ripieno;
 
@@ -37,6 +37,14 @@ public class Cioccolatini extends Cioccolato{
     public void setRipieno(String ripieno) {
         this.ripieno = ripieno;
     }
+
+    @Override
+    public String toString() {
+        return "Cioccolatini [forma=" + forma + ", tipoCioccolato=" + tipoCioccolato + ", ripieno=" + ripieno
+                + ", peso=" + peso + ", aggiunta=" + aggiunta + "]";
+    }
+
+    
 
     
 }

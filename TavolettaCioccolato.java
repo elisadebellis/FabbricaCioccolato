@@ -17,10 +17,17 @@ public class TavolettaCioccolato extends Cioccolato {
         }
     }
 
-    public TavolettaCioccolato(String tipoCioccolato, String aggiunta, int peso, boolean contieneNocciole){
-        super(tipoCioccolato, aggiunta);
+    public TavolettaCioccolato(String tipoCioccolato, String aggiunta,double percentualeCacao, int peso, boolean contieneNocciole){
+        super(tipoCioccolato, aggiunta,percentualeCacao);
         setPeso(peso);
         this.contieneNocciole=contieneNocciole;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "TavolettaCioccolato [peso=" + peso + ", tipoCioccolato=" + tipoCioccolato + ", contieneNocciole="
+                + contieneNocciole + ", aggiunta=" + aggiunta + "]";
     }
 
     @Override
